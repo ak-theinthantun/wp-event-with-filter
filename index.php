@@ -23,6 +23,7 @@ class WP_Events_Filter{
       add_action('rest_api_init', [$this, 'register_rest_routes']);
       add_action('wp_enqueue_scripts', [$this, 'enqueue_scripts']);
       add_shortcode('events_filter', [$this, 'event_filter_render_shortcode']);
+      
    }
    public function register_rest_routes(){
       register_rest_route('events/v1', '/filter', [
@@ -218,3 +219,5 @@ register_deactivation_hook( __FILE__, 'wp_evetns_filter_deactivate' );
 function wp_evetns_filter_deactivate() {
    flush_rewrite_rules();
 }  
+
+?>

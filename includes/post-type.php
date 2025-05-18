@@ -120,3 +120,5 @@ function wp_events_filter_register_post_types() {
 
 // Hook into WordPress init action
 add_action('init', 'wp_events_filter_register_post_types');
+
+?>
